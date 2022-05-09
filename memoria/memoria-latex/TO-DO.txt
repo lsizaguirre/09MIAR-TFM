@@ -1,0 +1,41 @@
+Introduccion
+- Complementar la información de BERT con el siguiente articulo https://towardsdatascience.com/keeping-up-with-the-berts-5b7beb92766
+
+Metodologia
+-https://stackoverflow.com/questions/58636587/how-to-use-bert-for-long-text-classification. Este muestra las tres opciones al problema de 512
+- Este articulo compara la irrelevancia de usar los primeros o los ultimos 512 tokens en el input de bert. https://arxiv.org/pdf/1905.05583.pdf
+
+La primera parte de metodologia? TRansfer Learning. https://www.youtube.com/watch?v=2_okfp981gs
+Ver bien donde voy a meter toda esta parte. Marco teorico, metodologia, resumen?
+
+Fine Tunning
+https://www.analyticsvidhya.com/blog/2020/07/transfer-learning-for-nlp-fine-tuning-bert-for-text-classification/
+https://stats.stackexchange.com/questions/343763/fine-tuning-vs-transferlearning-vs-learning-from-scratch#:~:text=Transfer%20learning%20is%20when%20a,train%20only%20the%20output%20model.
+
+
+
+
+https://github.com/bfemenia/VIU-TFM/blob/master/Memoria_TFM_BrunoFemeniaCastella.pdf
+https://github.com/idelvalle/TFM/blob/master/pdf/TFM_DELVALLETORRES-IGNACIO.pdf---
+
+
+
+
+ANTIGUO RESUMEN
+\textbf{BERT}, siglas para \textit{\textbf{B}idirectional \textbf{E}ncoder \textbf{R}epresentations from \textbf{T}ransformers} es un modelo de lenguaje preentrenado presentado por investigadores de Google en octubre de 2018 en el paper \textit{BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding} \cite{https://doi.org/10.48550/arxiv.1810.04805}. 
+
+Desde su aparición, BERT ha logrado ampliamente demostrar que el concepto de \textit{transfer learning} que había sido hasta ese momento ampliamente utilizado en la visión por computadora con las \textit{Redes Neuronales Convolucionales}\footnote{CNN, por sus siglas en inglés.}, también era una herramienta poderosa en el \textit{Procesamiento del Lenguaje Natural}\footnote{NLP, por sus siglas en inglés.}. 
+
+Desde su aparición, BERT ha beneficiado a la comunidad del \textit{Machine Learning} y específicamente a la comunidad del NLP al haber acelerado los avances en este tema.
+
+Como objetivo de este trabajo se explora BERT y su potencia sobre otros modelos a la hora de resolver problemas propios del procesamiento natural del lenguaje. Evaluaremos la facilidad de su uso y su desempeño en la resolución de nuevas tareas ajenas a las que para en un principio fue preentrenado. 
+
+En los primeros capítulos, se estudia la disciplina del procesamiento del lenguaje natural, los modelos que eran utilizados principalmente en la mayoría de problemas antes de la aparición de los modelos basados en \textit{Attention} y \textit{Transformers}, como las Redes Neuronales Recurrentes y las Long Short-term Memory (RNN y LSTM, por sus siglas en inglés), se explica en que consisten los conceptos de Atencion, Transformers y se analiza BERT, su funcionamiento y su arquitectura.
+
+En este trabajo se usó un modelo preentrenado de BERT y se ajustó con técnicas de Fine Tunning para la resolución de distintos problemas como el análisis de sentimientos de reseñas de películas, la identificación de respuestas a preguntas, dado un contexto. Para cada uno de estos problemas se escogió un conjunto de datos adecuado que permitiera reentrenar el modelo y se comparó el desempeño de estas soluciones con otras soluciones que componen el actual estado del arte.
+
+Los resultados obtenidos en este trabajo demuestran que el modelo preentrenado de BERT se puede rápida y fácilmente adaptar para crear una solución de calidad y efectiva, utilizando conjunto de datos reducidos y con un esfuerzo de entrenamiento aceptable para la resolución de distintos problemas asociados al procesamiento del lenguaje natural.
+
+--------
+
+

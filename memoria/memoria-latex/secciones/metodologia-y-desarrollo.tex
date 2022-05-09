@@ -1,0 +1,33 @@
+% METODOLOGÍA
+
+\cleardoublepage
+
+\chapter{Metodología y Desarrollo}
+\label{chapter-metodologia-desarrollo}
+
+La idea general del \textit{transfer learning} es preentrenar un modelo usando una red neuronal de gran tamaño sobre un dataset de gran volumen para después ajustar la red (\textit{fine-tunning}) usando un dataset mucho más reducido y ajustado a la tarea especifica que se intenta resolver. El aprendizaje por transferencia marca una gran diferencia y nos permite resolver nuevos problemas mucho más fácilmente, ya que normalmente podemos cargar pesos previamente entrenados de un modelo sin requerir de un gran conjunto de datos para resolver una tarea específica.
+
+BERT es un modelo de lenguaje preentrenado que ha demostrado que el concepto de la transferencia del aprendizaje ha resultado ser una herramienta poderosa no solo en los problemas de visión por computacdora (\gls{gls_computer_vision}, en inglés), sino también en el procesamiento natural del lenguaje y que podría ser suficiente con un ligero ajuste (\textit{fine-tunning}) implementar un nuevo modelo que resuelva de forma satisfactoria  una nueva tarea.
+
+El \textit{transfer learning} se convirtió en la estrategia predeterminada en la visión por computadora alrededor del año 2014. A menudo usaban modelos que estaban entrenados previamente para la clasificación de imágenes en Imagenet \cite{Olga2015Imagenet}, lo que significaba que usaban aprendizaje supervisado y un gran conjunto de datos con etiquetas para entrenar previamente el modelo. Durante varios años se estuvo investigando sin éxito formas de usar el aprendizaje por transferencia en el procesamiento del lenguaje natural y se estuvo tratando de encontrar tareas y conjuntos de datos con las mismas propiedades atractivas que tenía Imagenet para la visión por computadora. Finalmente, en 2018 al menos tres artículos diferentes (BERT \cite{https://doi.org/10.48550/arxiv.1810.04805}, ELMo \cite{Peters2018Elmo}, GPT \cite{radford2018improving}) demostraron que se puede usar el \textit{transfer learning} también en el procesamiento natural del lenguaje. 
+
+Entre estos modelos, se puede decir que BERT fue el más limpio, ya que requirió la menor cantidad de \textit{fine-tunning}, un conjunto de datos más pequeño y, en general, también dio los mejores resultados.
+
+Basados en estos conceptos de \textit{transfer learning} y \textit{fine-tunning} procederemos a evaluar el uso y el desempeño de BERT en la resolución de problemas de procesamiento natural del lenguaje siguiendo los siguientes pasos:
+
+\begin{enumerate}
+  \item \textbf{Selección de problemas} \\
+  En esta primera etapa elegimos un par de problemas típicos del procesamiento natural del lenguaje pero que a su vez sean distintos a los problemas para los que BERT fue entrenado inicialmente. La idea es poder demostrar la adaptabilidad del modelo para resolver cualquier clase de problemas basado en la arquitectura propia de BERT. Los problemas con los que trabajaremos son el Análisis de Sentimiento (clasificación) y la tarea de Respuesta a Preguntas.
+  \item \textbf{Selección de los conjuntos de datos (\textit{datasets})} \\
+  En cuanto a la selección de los \textit{datasets} se decidió trabajar con conjuntos de datos asociados a cada uno de los problemas antes descritos, procurando que los \textit{datasets} elegidos permitan establecer indicadores de comparación y que existan estudios de comparación del desempeño con otros modelos y soluciones. Para el caso de análisis de sentimiento se trabajará con un \textit{dataset} de reseñas de películas de IMDB creado por investigadores de la Universidad de Stanford, para el problema de preguntas y respuestas se trabajó con el conocido \textit{dataset} SQuAD en su versión 1.0.
+  \item \textbf{Fine Tuning de BERT} \\
+  Para cada uno de los problemas elegidos se hizo un ajuste del modelo inicial de BERT usando para el entrenamiento un \textit{dataset} etiquetado. La intención es hacer las adecuaciones necesarias al modelo para intentar encontrar una solución simple a cada uno de los problemas elegidos.
+  \item \textbf{Evaluación de los resultados} \\
+  Se compararon los resultados obtenidos en cada problema con otros modelos implementados para resolver el problema. La idea es validar que simplemente haciendo un pequeño \textit{fine-tunning} del modelo original podemos obtener resultados similares o cercanos a los del estado del arte en cada problema.
+\end{enumerate}
+
+\clearpage 
+\input{secciones/meto-classification.tex}
+
+\clearpage 
+\input{secciones/meto-qa}

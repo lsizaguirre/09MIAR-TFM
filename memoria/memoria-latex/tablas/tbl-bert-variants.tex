@@ -1,0 +1,15 @@
+Paste Latex Here\begin{table}[ht!]
+\resizebox{\textwidth}{!}{
+	\begin{tabular}{l|c|p{9cm}}
+		\toprule
+		\textbf{Modelo}                                                         & \textbf{Creador} & \textbf{Descripción}                                                                                                                                                                                                                                                                                                                          \\ \midrule
+		Albert \cite{ALBERT_https://doi.org/10.48550/arxiv.1909.11942}          & Google           & Este paper describe técnicas de reducción de parámetros para disminuir la reducción de memoria y aumentar la velocidad de entrenamiento de los modelos BERT.                                                                                                                                                                               \\ \midrule
+		RoBERTa \cite{ROBERTA_https://doi.org/10.48550/arxiv.1907.11692}        & Facebook         & Este paper cree que los modelos BERT originales estaban poco entrenados y muestra que con más entrenamiento/ajuste puede superar los resultados iniciales.                                                                                                                                                                                    \\ \midrule
+		ERNIE \cite{ERNIE_https://doi.org/10.48550/arxiv.1904.09223}            & -                & Representación mejorada a través de la integración del conocimiento de Baidu: se inspira en la estrategia de enmascaramiento de BERT y aprende la representación del lenguaje mejorada mediante estrategias de enmascaramiento del conocimiento, que incluyen el enmascaramiento a nivel de entidad y el enmascaramiento a nivel de frase. \\ \midrule
+		DistilBERT  \cite{DISTILBERT_https://doi.org/10.48550/arxiv.1910.01108} & -                & BERT más pequeño. Reduce el número de capas a 6 y elimina el embedding de segmentación                                                                                                                                                                                                                                                     \\ \bottomrule
+	\end{tabular}
+}
+% \caption[Así aparece el rótulo en el índice]{Así aparece el rótulo en el texto.}
+\caption[BERT - Otros modelos de lenguaje basados en BERT]{\textbf{Lista de modelos basados en BERT. Fuente: \cite{articleBrownGPT3}}}
+\label{tbl-bert-variants}
+\end{table}

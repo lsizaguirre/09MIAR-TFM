@@ -1,0 +1,16 @@
+% LIMITACIONES Y PERSPECTIVAS DE FUTURO
+
+%\cleardoublepage
+
+\chapter{Limitaciones y Perspectivas de Futuro}
+\label{chapter-limitaciones-futuro}
+
+\begin{enumerate}
+    \item \textbf{Escalar el enfoque:} El enfoque de este trabajo se realizó sobre BERT, pero a la fecha existen otros modelos de lenguaje preentrenados basados en la arquitectura de transformers que están teniendo mucha relevancia en el campo del procesamiento del lenguaje natural como XLNet, T5 o GPT-3. En el mismo sentido, existen distintas variaciones de BERT (tabla \ref{tbl-bert-variants}) que también están teniendo excelentes resultados en la resolución de problemas específicos. Algunas de estas variaciones prometen mejoras, otras simplifican y hacen el entrenamiento aún más liviano. Se recomienda explorar otros modelos y variaciones de BERT.
+    
+    Adicionalmente en este trabajo se desarrollan dos aplicaciones que resuelven dos tareas bien concretas y especificas dentro del NLP, el análisis de sentimiento a través de un problema de clasificación y el problema de preguntas y respuestas. Se recomienda ampliar el estudio con otras tareas. 
+    
+    \item \textbf{Mejorar fine-tunning:} Las soluciones planteadas en este trabajo se basan en un fine-tunning muy simple. Es muy probable que se puedan realizar mejoras sustanciales a los resultados obtenidos utilizando técnicas de fine-tunning más complejas, como las exploradas en el paper ``Universal Language Model Fine-tuning for Text Classification'' \citep{ULMFit_https://doi.org/10.48550/arxiv.1801.06146}, donde plantean un método de transfer learning efectivo que se puede aplicar a cualquier tarea en NLP, e introduce técnicas que son clave para obtener mejores resultados en el proceso de fine-tunning para un modelo de lenguaje.
+    
+    \item \textbf{Capacidades de cómputo:} La simplicidad de las soluciones propuestas se debe en gran parte a las capacidades de cómputo disponible para la implementación. El entrenamiento y fine-tunning de los modelos propuestos se realizó utilizando la versión gratuita de Google Colab (\url{https://colab.research.google.com/}) bajo un entorno donde los recursos no están garantizados y son limitados. Por este motivo se optó por usar la versión BERT$_{BASE}$ y no la versión BERT$_{LARGE}$ (ver \ref{subsection-arquitectura-bert}) en las soluciones propuestas. 
+\end{enumerate}

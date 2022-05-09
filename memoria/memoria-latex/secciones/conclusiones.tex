@@ -1,0 +1,23 @@
+% CONCLUSIONES
+
+\chapter{Conclusiones}
+\label{chapter-conclusiones}
+
+En este trabajo se evaluó el uso y se comparó el desempeño de BERT en la resolución de dos tareas, el análisis de sentimiento y el problema de respuesta a preguntas. En base a al estudio realizado y a los experimentos desarrollados, se rinden las siguientes conclusiones:
+
+\begin{enumerate}[label=\destacado{\arabic*.}]
+  \setlength\itemsep{1em}
+
+  \item La arquitectura unificada de BERT le permite al modelo poder adaptarse fácilmente a la solución de distintos problemas en el ámbito del procesamiento del lenguaje natural, obteniendo resultados cercanos a los que define el estado del arte para esos problemas. 
+
+  \item Resulta más fácil, rápido  y eficiente usar un modelo preentrenado en un gran volumen de datos como punto de partida para la construcción de soluciones a tareas de NLP. En el caso de BERT, este ha sido entrenado con el corpus de Wikipedia y libros de Google Books, en su versión base tiene 110 millones de parámetros, lo que lo hace un modelo muy grande. Adaptar el modelo es mucho más fácil y barato que entrenarlo from scratch (desde cero).
+
+  \item Para que BERT funcione de forma adecuada se debe hacer un preprocesamiento del conjunto de datos adaptándolo a lo que el modelo espera recibir como entrada. Este preprocesamiento consiste en transformar las frases a un vector de token (token embeddings) y añadir ciertos metadatos para marcar el principio y el final de las oraciones, así como para distinguir las diferentes oraciones o la posición de las palabras en una oración.
+
+  \item Es importante considerar el proceso de limpieza de los datos para obtener un buen resultado. En tal sentido, el detectar, corregir y eliminar registros imprecisos o que no son de utilidad para el modelo, genera un mejor rendimiento y un impacto positivo en la solución.
+  
+  \item Sin profundizar mucho en el desarrollo de la arquitectura de las capas densas que se crean en los modelos de BERT para hacer el proceso de ajuste, se pueden conseguir buenos resultados. Se podría siempre optimizar el modelo y profundizar en la complejidad de estas últimas capas para mejorar el rendimiento, pero con configuraciones y ajustes básicos es suficiente para conseguir un rendimiento aceptable.
+  
+  \item Existen diferentes versiones de BERT. Es importante seleccionar una versión apropiada entre BASE o LARGE, según las capacidades de computo y una versión multilenguaje o de lenguaje especifico según los datos de entrenamiento con los que se cuente. Si utilizamos un modelo multilenguaje  y nuestros datos no lo son, no se obtendrá un buen rendimiento. 
+
+\end{enumerate}
